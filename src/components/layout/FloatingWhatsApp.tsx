@@ -194,7 +194,7 @@ export function FloatingWhatsApp() {
   const hasMessenger = Boolean(CONFIG.channels.messengerUsername);
 
   const channels: { key: ChannelKey; label: string; icon: ReactElement; bg?: string; color?: string }[] = [
-    { key: 'whatsapp', label: 'WhatsApp Chat', icon: <WhatsAppIcon />, bg: 'linear-gradient(135deg,#25D366,#128C7E)', color: '#fff' },
+    { key: 'whatsapp', label: 'WhatsApp Chat', icon: <WhatsAppIcon />, bg: WA_GRADIENT, color: '#fff' },
     ...(hasMessenger
       ? [{ key: 'messenger' as ChannelKey, label: 'Messenger', icon: <ChatIcon />, bg: 'linear-gradient(135deg,#0084FF,#00C6FF)', color: '#fff' }]
       : []),
@@ -285,29 +285,33 @@ export function FloatingWhatsApp() {
 }
 
 // ---------------------------------------------------------------------------
-// Styles — navy/gold brand palette
-//   navy  #0f1e3d   gold #bfa07a   gold-soft #d4bd9a
+// Styles
+//   WhatsApp brand green:  #25D366 (light) -> #128C7E (dark)
+//   Nexira brand kept on the panel header/avatar accents: navy #0f1e3d, gold #bfa07a
 // ---------------------------------------------------------------------------
 const NAVY = '#0f1e3d';
 const GOLD = '#bfa07a';
 const GOLD_SOFT = '#d4bd9a';
+const WA_GREEN = '#25D366';
+const WA_GREEN_DARK = '#128C7E';
+const WA_GRADIENT = `linear-gradient(135deg, ${WA_GREEN}, ${WA_GREEN_DARK})`;
 const brandGradient = `linear-gradient(135deg, ${NAVY}, #1a2f5a 55%, ${GOLD})`;
 
 const S: Record<string, React.CSSProperties> = {
   root: { position: 'fixed', bottom: 24, right: 24, zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16, fontFamily: 'system-ui,-apple-system,"Segoe UI",Roboto,sans-serif' },
   fabWrap: { position: 'relative', width: 64, height: 64 },
-  pulseRing: { position: 'absolute', inset: 0, borderRadius: '50%', background: GOLD, zIndex: 0 },
+  pulseRing: { position: 'absolute', inset: 0, borderRadius: '50%', background: WA_GREEN, zIndex: 0 },
   fab: {
     position: 'relative', zIndex: 1, width: 64, height: 64, borderRadius: '50%', border: 'none',
-    background: brandGradient, color: '#fff',
+    background: WA_GRADIENT, color: '#fff',
     display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer',
-    boxShadow: '0 8px 28px rgba(15,30,61,0.45)', overflow: 'hidden',
+    boxShadow: '0 8px 28px rgba(37,211,102,0.45)', overflow: 'hidden',
   },
   ripple: { position: 'absolute', width: 20, height: 20, borderRadius: '50%', background: 'rgba(255,255,255,0.6)', transform: 'translate(-50%,-50%)', animation: 'fw-ripple 0.65s ease-out forwards', pointerEvents: 'none' },
   panel: { width: 350, maxWidth: 'calc(100vw - 48px)', background: '#fff', borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.28)', display: 'flex', flexDirection: 'column', transformOrigin: 'bottom right' },
   header: { position: 'relative', background: brandGradient, color: '#fff', padding: '16px 18px', display: 'flex', alignItems: 'center', gap: 12, overflow: 'hidden' },
   headerGlow: { position: 'absolute', top: -30, right: -20, width: 120, height: 120, borderRadius: '50%', background: 'rgba(191,160,122,0.28)', filter: 'blur(10px)' },
-  avatar: { position: 'relative', width: 44, height: 44, borderRadius: '50%', background: 'rgba(255,255,255,0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, border: `2px solid ${GOLD}` },
+  avatar: { position: 'relative', width: 44, height: 44, borderRadius: '50%', background: 'rgba(255,255,255,0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, border: `2px solid ${WA_GREEN}` },
   headerText: { position: 'relative', display: 'flex', flexDirection: 'column', flex: 1, minWidth: 0 },
   headerTitle: { fontSize: 15, lineHeight: 1.2 },
   headerSub: { fontSize: 12, opacity: 0.92, display: 'flex', alignItems: 'center', gap: 6 },
@@ -319,5 +323,5 @@ const S: Record<string, React.CSSProperties> = {
   channelBtn: { display: 'flex', alignItems: 'center', gap: 12, width: '100%', padding: '12px 16px', borderRadius: 14, border: `1px solid ${GOLD_SOFT}`, background: '#fff', color: NAVY, fontSize: 14, fontWeight: 600, cursor: 'pointer', textAlign: 'left', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' },
   footer: { display: 'flex', alignItems: 'center', gap: 8, padding: 12, background: '#fff', borderTop: '1px solid #eee' },
   input: { flex: 1, border: `1px solid ${GOLD_SOFT}`, borderRadius: 22, padding: '11px 16px', fontSize: 14, outline: 'none', background: '#faf9f6' },
-  sendBtn: { width: 44, height: 44, borderRadius: '50%', border: 'none', background: brandGradient, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0, boxShadow: '0 4px 14px rgba(15,30,61,0.4)' },
+  sendBtn: { width: 44, height: 44, borderRadius: '50%', border: 'none', background: WA_GRADIENT, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0, boxShadow: '0 4px 14px rgba(37,211,102,0.4)' },
 };

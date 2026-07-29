@@ -96,7 +96,7 @@ export function Impact() {
       </div>
 
       <Container>
-        {/* Pillars — one lead story, three supporting, instead of four equal tiles */}
+        {/* Pillars — one lead story, three supporting, evenly distributed to balance the lead's height */}
         <div className="mt-20 grid gap-6 lg:mt-28 lg:grid-cols-12 lg:gap-8">
           <motion.article
             initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ export function Impact() {
             <ImageReveal
               src={lead.image}
               alt={lead.title}
-              className="aspect-[16/11] w-full"
+              className="aspect-[16/11] w-full flex-1"
               rounded="rounded-xl2"
               parallax
             />
@@ -116,7 +116,7 @@ export function Impact() {
             <p className="mt-3 max-w-lg text-lg leading-relaxed text-slateblue sm:text-xl">{lead.body}</p>
           </motion.article>
 
-          <div className="flex flex-col gap-6 lg:col-span-5 lg:gap-8">
+          <div className="flex flex-col gap-5 lg:col-span-5">
             {rest.map((p, i) => (
               <motion.article
                 key={p.title}
@@ -124,12 +124,12 @@ export function Impact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: (i + 1) * 0.1 }}
-                className="group flex items-start gap-5 sm:gap-6"
+                className="group flex flex-1 items-center gap-5 rounded-xl2 border border-navy/10 bg-cream/60 p-4 transition-colors duration-500 hover:border-gold/40 hover:bg-white sm:gap-6 sm:p-5"
               >
                 <ImageReveal
                   src={p.image}
                   alt={p.title}
-                  className="aspect-square w-28 shrink-0 sm:w-36"
+                  className="aspect-square w-24 shrink-0 self-stretch sm:w-32"
                   rounded="rounded-xl2"
                   parallax
                 />

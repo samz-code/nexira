@@ -6,7 +6,10 @@ import { FUTURE_VENTURES } from '@/constants/data';
 
 export function Future() {
   return (
-    <section id="future" className="relative overflow-hidden bg-navy py-section text-cream sm:py-section-sm lg:py-section">
+    <section
+      id="future"
+      className="relative overflow-hidden bg-navy py-section text-cream sm:py-section-sm lg:py-section"
+    >
       <div className="absolute inset-0 noise-overlay opacity-[0.03]" aria-hidden />
       <div className="absolute right-0 top-0 h-[420px] w-[420px] rounded-full bg-green/10 blur-[120px]" aria-hidden />
 
@@ -27,18 +30,23 @@ export function Future() {
           </p>
         </div>
 
-        {/* Pipeline — uniform card grid, hairline-separated to stay in register with the rest of the site */}
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl3 border border-cream/10 bg-cream/10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+        {/* Pipeline — spaced standalone cards with breathing room */}
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8">
           {FUTURE_VENTURES.map((v, i) => (
             <motion.article
               key={v.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (i % 6) * 0.05 }}
-              className="group flex flex-col bg-navy transition-colors duration-500 hover:bg-cream/[0.03]"
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (i % 6) * 0.06 }}
+              className="group flex flex-col overflow-hidden rounded-xl3 border border-cream/10 bg-cream/[0.02] transition-all duration-500 hover:-translate-y-1 hover:border-gold/30 hover:bg-cream/[0.04] hover:shadow-2xl hover:shadow-black/40"
             >
-              <ImageReveal src={v.image} alt={v.name} className="aspect-[16/10] w-full" rounded="rounded-none" />
+              <ImageReveal
+                src={v.image}
+                alt={v.name}
+                className="aspect-[16/10] w-full overflow-hidden"
+                rounded="rounded-none"
+              />
 
               <div className="flex flex-1 flex-col p-7 sm:p-8">
                 <span className="font-display text-xs font-semibold tracking-widest text-cream/40 transition-colors duration-500 group-hover:text-gold">
@@ -48,7 +56,9 @@ export function Future() {
                 <h3 className="mt-3 font-display text-2xl font-bold leading-tight text-cream">{v.name}</h3>
                 <p className="mt-1.5 text-xs uppercase tracking-wider text-cream/45">{v.industry}</p>
 
-                <p className="mt-4 text-sm font-medium italic text-gold">{v.tagline}</p>
+                <div className="my-4 h-px w-10 bg-gold/40 transition-all duration-500 group-hover:w-16" aria-hidden />
+
+                <p className="text-sm font-medium italic text-gold">{v.tagline}</p>
                 <p className="mt-2 flex-1 text-[0.95rem] leading-relaxed text-cream/65 text-pretty">
                   {v.description}
                 </p>

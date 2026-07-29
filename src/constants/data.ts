@@ -22,7 +22,7 @@ export const COMPANIES: Company[] = [
     status: 'operating',
     image: IMAGES.ecosystem.productionsA,
     description:
-      'A full-service production house creating documentaries, branded films, and broadcast content that captures the spirit of South Sudan and the wider region — for audiences at home and abroad.',
+      'A full-service production house creating documentaries, branded films, and broadcast content that captures the spirit of South Sudan and the wider region, for audiences at home and abroad.',
     services: ['Documentary & branded film', 'Broadcast production', 'Post-production & editing', 'Creative direction'],
     strengths: ['Authentic regional narratives', 'In-house crew & equipment', 'Pan-African distribution reach'],
     accent: '#BFA07A',
@@ -61,7 +61,7 @@ export const COMPANIES: Company[] = [
     status: 'operating',
     image: IMAGES.ecosystem.horizonA,
     description:
-      'A tourism and hospitality brand opening South Sudan to the world — curating journeys that reveal its landscapes, wildlife, and cultures with care and respect.',
+      'A tourism and hospitality brand opening South Sudan to the world, curating journeys that reveal its landscapes, wildlife, and cultures with care and respect.',
     services: ['Curated expeditions', 'Hospitality partnerships', 'Cultural tours', 'Destination marketing'],
     strengths: ['Responsible travel ethos', 'Local guide network', 'Emerging destination expertise'],
     accent: '#C5D2E2',
@@ -90,7 +90,7 @@ export const FUTURE_VENTURES: Company[] = [
     status: 'future',
     image: IMAGES.future.tech,
     description:
-      'A technology venture building digital infrastructure, platforms, and services that serve a fast-growing, mobile-first population — and the businesses that serve them.',
+      'A technology venture building digital infrastructure, platforms, and services that serve a fast-growing, mobile-first population, and the businesses that serve them.',
     services: ['Digital platforms', 'Enterprise software', 'Connectivity & infrastructure', 'Talent development'],
     strengths: ['Youth-first market', 'Leapfrog opportunity', 'Regional scale potential'],
     accent: '#556780',
@@ -116,7 +116,7 @@ export const FUTURE_VENTURES: Company[] = [
     status: 'future',
     image: IMAGES.future.foundationA,
     description:
-      'A foundation channelling the success of the group into education, youth opportunity, and community resilience — ensuring growth reaches the people who make it possible.',
+      'A foundation channelling the success of the group into education, youth opportunity, and community resilience, ensuring growth reaches the people who make it possible.',
     services: ['Education & scholarships', 'Youth programmes', 'Community investment', 'Partnership grants'],
     strengths: ['Group-wide impact reach', 'Long-term commitment', 'Measurable outcomes'],
     accent: '#BFA07A',
@@ -167,7 +167,7 @@ export const PROJECTS: Project[] = [
     industry: 'Agriculture & Food Security',
     image: IMAGES.projects.harbor,
     overview:
-      'A multi-season programme developing productive farmland along South Sudan\u2019s river belt — combining modern agronomy, local labour, and direct market access to build a reliable domestic food supply.',
+      'A multi-season programme developing productive farmland along South Sudan\u2019s river belt, combining modern agronomy, local labour, and direct market access to build a reliable domestic food supply.',
     objectives: [
       'Establish productive acreage across multiple growing seasons',
       'Train and employ local farming communities',
@@ -183,18 +183,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'horizon-launch',
-    title: 'Horizon Seekers — Destination Launch',
+    title: 'Horizon Seekers: Destination Launch',
     industry: 'Tourism & Hospitality',
     image: IMAGES.projects.elephants,
     overview:
-      'The founding programme of Horizon Seekers — positioning South Sudan as a credible, responsible destination for curated travel, built around wildlife, landscape, and cultural heritage.',
+      'The founding programme of Horizon Seekers, positioning South Sudan as a credible, responsible destination for curated travel, built around wildlife, landscape, and cultural heritage.',
     objectives: [
       'Establish a responsible-tourism operating standard',
       'Build a network of trained local guides',
       'Launch destination marketing to regional and international travellers',
     ],
     impact:
-      'The programme opened a new category of opportunity for the country — generating visibility, foreign interest, and local income while preserving the ecosystems at its centre.',
+      'The programme opened a new category of opportunity for the country, generating visibility, foreign interest, and local income while preserving the ecosystems at its centre.',
     results: [
       { label: 'Curated expeditions', value: '35+' },
       { label: 'Guides trained', value: '24' },
@@ -203,18 +203,18 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'media-platform',
-    title: 'Nexira Media — Platform Build',
+    title: 'Nexira Media: Platform Build',
     industry: 'Media & Digital',
     image: IMAGES.projects.communityGarden,
     overview:
-      'The launch of Nexira Media\u2019s digital publishing platform — a multi-channel operation producing original journalism and analysis for a fast-growing, mobile-first audience.',
+      'The launch of Nexira Media\u2019s digital publishing platform, a multi-channel operation producing original journalism and analysis for a fast-growing, mobile-first audience.',
     objectives: [
       'Build a multi-platform publishing operation',
       'Establish independent editorial standards',
       'Reach audiences across mobile and social channels',
     ],
     impact:
-      'The platform gave South Sudan a new, independent editorial voice — elevating stories that had been underrepresented and building an engaged, informed readership.',
+      'The platform gave South Sudan a new, independent editorial voice, elevating stories that had been underrepresented and building an engaged, informed readership.',
     results: [
       { label: 'Original stories published', value: '200+' },
       { label: 'Monthly readers', value: '45K' },
@@ -271,7 +271,7 @@ export const INSIGHTS: Insight[] = [
     category: 'Partnerships',
     title: 'How We Choose the Partners We Build With',
     excerpt:
-      'Our framework for evaluating partnerships, joint ventures, and investment — and what we look for beyond the term sheet.',
+      'Our framework for evaluating partnerships, joint ventures, and investment, and what we look for beyond the term sheet.',
     date: 'December 2024',
     readTime: '7 min read',
     image: IMAGES.story.meeting,
@@ -308,7 +308,7 @@ export const TIMELINE: TimelineEntry[] = [
   {
     year: 'Year One',
     title: 'Building the first companies',
-    body: 'Nexira Productions and Nexira Media are founded to tell the country\u2019s stories — on screen and in print — and to build an informed, connected public.',
+    body: 'Nexira Productions and Nexira Media are founded to tell the country\u2019s stories, on screen and in print, and to build an informed, connected public.',
   },
   {
     year: 'Expansion',
@@ -318,12 +318,12 @@ export const TIMELINE: TimelineEntry[] = [
   {
     year: 'Today',
     title: 'A diversified, operating group',
-    body: 'Five companies operate across the economy — each independent, each connected, each contributing to a more resilient, self-sustaining national story.',
+    body: 'Five companies operate across the economy, each independent, each connected, each contributing to a more resilient, self-sustaining national story.',
   },
   {
     year: 'Tomorrow',
     title: 'Building the next decade',
-    body: 'Five future ventures — technology, logistics, foundation, energy, and properties — take shape, designed for the country South Sudan is becoming.',
+    body: 'Five future ventures, technology, logistics, foundation, energy, and properties, take shape, designed for the country South Sudan is becoming.',
   },
 ];
 
@@ -339,7 +339,7 @@ export const OPPORTUNITIES: Opportunity[] = [
   {
     id: 'partnerships',
     title: 'Business Partnerships',
-    summary: 'Co-build operating businesses with us — sharing capital, capability, and conviction.',
+    summary: 'Co-build operating businesses with us, sharing capital, capability, and conviction.',
     detail: 'We partner with established operators and emerging founders who see what we see in South Sudan, and who want to build something that outlasts a single cycle.',
     icon: 'Handshake',
   },
@@ -347,7 +347,7 @@ export const OPPORTUNITIES: Opportunity[] = [
     id: 'investment',
     title: 'Investment Opportunities',
     summary: 'Back the growth of a diversified, long-horizon group and its ventures.',
-    detail: 'We work with investors who think in decades, not quarters — and who understand that the most meaningful returns in a young market are built patiently, with discipline.',
+    detail: 'We work with investors who think in decades, not quarters, and who understand that the most meaningful returns in a young market are built patiently, with discipline.',
     icon: 'TrendingUp',
   },
   {
@@ -394,7 +394,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Connect', href: '#connect' },
 ];
 
-// @/constants/data.ts — CONTACT block
+// @/constants/data.ts CONTACT block
 // Updated with details provided by Conison Technologies (18/07/2026):
 //   Domain:  nexiraenterprises.com
 //   Email:   info@nexiraenterprises.com
@@ -407,7 +407,7 @@ export const CONTACT = {
   website: 'https://www.nexiraenterprises.com',
   email: 'info@nexiraenterprises.com',
   phone: '+211 925 576 720',
-  whatsapp: '+211 925 576 720', // add this line
+  whatsapp: '+211 925 576 720',
   mapsQuery: 'Juba, South Sudan',
 };
 

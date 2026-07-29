@@ -33,28 +33,33 @@ export function Opportunities() {
           description="We work with investors, institutions, governments, and operators who see what we see in South Sudan. These are the doors that are open."
         />
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl3 border border-navy/10 bg-navy/10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+        {/* Spaced standalone cards */}
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8">
           {OPPORTUNITIES.map((opp, i) => {
             const Icon = ICONS[opp.icon] ?? Compass;
             return (
               <motion.article
                 key={opp.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: (i % 3) * 0.07 }}
-                className="group relative flex flex-col bg-cream p-8 transition-colors duration-500 hover:bg-white sm:p-9"
+                className="group relative flex flex-col rounded-xl3 border border-navy/10 bg-white p-8 transition-all duration-500 hover:-translate-y-1 hover:border-gold/40 hover:shadow-xl hover:shadow-navy/5 sm:p-9"
               >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-navy/15 text-navy transition-colors duration-500 group-hover:border-gold group-hover:text-gold">
+                <div className="flex items-center justify-between">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-navy/15 text-navy transition-colors duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-cream">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-gold">{opp.summary}</p>
+                  <span className="font-display text-sm font-semibold tracking-widest text-navy/25 transition-colors duration-500 group-hover:text-gold">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
                 </div>
 
-                <h3 className="mt-5 font-display text-xl font-bold leading-snug text-navy">{opp.title}</h3>
+                <h3 className="mt-6 font-display text-xl font-bold leading-snug text-navy">{opp.title}</h3>
 
-                <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-slateblue text-pretty">
+                <p className="mt-2 text-xs font-bold uppercase tracking-widest text-gold">{opp.summary}</p>
+
+                <p className="mt-4 flex-1 text-[0.95rem] leading-relaxed text-slateblue text-pretty">
                   {opp.detail}
                 </p>
 

@@ -60,8 +60,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 border-t border-cream/10 pt-8 text-center text-sm text-cream/50">
+        <div className="mt-12 flex flex-col items-center justify-center gap-2 border-t border-cream/10 pt-8 text-center text-sm text-cream/50">
           <p>&copy; {new Date().getFullYear()} Nexira Enterprises Ltd. All rights reserved.</p>
+          <p>
+            Developed by{' '}
+            <a
+              href="https://www.facebook.com/Conisontech213/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline font-medium text-cream/70 transition-colors hover:text-gold"
+            >
+              Conison Technologies
+            </a>
+          </p>
         </div>
 
         <div className="h-16" />

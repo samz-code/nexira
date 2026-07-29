@@ -1,3 +1,4 @@
+// src/components/layout/ImageReveal.tsx
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
