@@ -31,8 +31,8 @@ export function Navbar() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-navy/10 bg-white shadow-sm">
-        <nav className="mx-auto flex h-20 w-full max-w-[100rem] items-center justify-between px-6 sm:px-10 lg:h-24 lg:px-16">
-          <button onClick={() => handleNav('#hero')} className="shrink-0 scale-110 lg:scale-125" aria-label="Nexira home">
+        <nav className="mx-auto flex h-16 w-full max-w-[100rem] items-center justify-between px-6 sm:px-10 lg:h-20 lg:px-16">
+          <button onClick={() => handleNav('#hero')} className="shrink-0 scale-100 lg:scale-110" aria-label="Nexira home">
             <Logo light={false} />
           </button>
 
@@ -86,7 +86,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col bg-navy px-6 pt-28 pb-10 lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col bg-navy px-6 pt-24 pb-10 lg:hidden"
           >
             <ul className="flex flex-col gap-2">
               {NAV_ITEMS.map((item, i) => (
